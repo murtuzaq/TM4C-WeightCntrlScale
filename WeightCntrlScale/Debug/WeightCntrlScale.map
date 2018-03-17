@@ -1,0 +1,1056 @@
+******************************************************************************
+                  TI ARM Linker PC v16.9.6                     
+******************************************************************************
+>> Linked Sat Mar 17 15:32:25 2018
+
+OUTPUT FILE NAME:   <WeightCntrlScale.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00006361
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  0000687d  00039783  R  X
+  SRAM                  20000000   00008000  00002c2b  000053d5  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00006880   00006880    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    000063de   000063de    r-x .text
+  0000664c    0000664c    0000019b   0000019b    r-- .const
+  000067e8    000067e8    00000098   00000098    r-- .cinit
+20000000    20000000    00002c2c   00000000    rw-
+  20000000    20000000    0000295b   00000000    rw- .bss
+  2000295c    2000295c    00000200   00000000    rw- .stack
+  20002b5c    20002b5c    000000d0   00000000    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     tm4c123gh6pm_startup_ccs.obj (.intvecs)
+
+.text      0    0000026c    000063de     
+                  0000026c    00000fc4     tasks.obj (.text)
+                  00001230    00000eac     FT_800.obj (.text)
+                  000020dc    00000d88     FT_CoPro_Cmds.obj (.text)
+                  00002e64    000008fc     draw.obj (.text)
+                  00003760    00000878     queue.obj (.text)
+                  00003fd8    000007ac     FT_GPU_HAL.obj (.text)
+                  00004784    00000682     sw_utility.obj (.text)
+                  00004e06    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : mpu_init.obj (.text)
+                  00004e08    000004b4     view.obj (.text)
+                  000052bc    000001d0     tm4c_port.obj (.text)
+                  0000548c    000001a4     weight.obj (.text)
+                  00005630    00000168     calibrate.obj (.text)
+                  00005798    00000158     tm4c_spi2.obj (.text)
+                  000058f0    0000012a     list.obj (.text)
+                  00005a1a    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : startup.obj (.text)
+                  00005a1c    0000010c     port.obj (.text)
+                  00005b28    000000f4     tm4c_eeprom.obj (.text)
+                  00005c1c    000000d8     tm4c_adc1.obj (.text)
+                  00005cf4    000000a6     portasm.obj (.text)
+                  00005d9a    00000002     --HOLE-- [fill = 0]
+                  00005d9c    0000009c     heap_1.obj (.text)
+                  00005e38    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.obj (.text)
+                  00005ed4    00000094     osMutex_FT.obj (.text)
+                  00005f68    00000086     hx711.obj (.text)
+                  00005fee    00000002     --HOLE-- [fill = 0]
+                  00005ff0    00000084     button.obj (.text)
+                  00006074    00000084     touchscreen.obj (.text)
+                  000060f8    0000007a     rtsv7M4_T_le_v4SPD16_eabi.lib : memset_t2.obj (.text)
+                  00006172    00000002     --HOLE-- [fill = 0]
+                  00006174    00000070                                   : autoinit.obj (.text)
+                  000061e4    00000068                                   : copy_decompress_lzss.obj (.text:decompress:lzss)
+                  0000624c    00000060     task_weight.obj (.text)
+                  000062ac    0000005c     task_pushbutton.obj (.text)
+                  00006308    00000058     FT_Platform.obj (.text)
+                  00006360    00000054     rtsv7M4_T_le_v4SPD16_eabi.lib : boot.obj (.text)
+                  000063b4    00000054                                   : exit.obj (.text)
+                  00006408    00000050     task_display.obj (.text)
+                  00006458    0000004c     rtsv7M4_T_le_v4SPD16_eabi.lib : cpy_tbl.obj (.text)
+                  000064a4    0000004c     task_third.obj (.text)
+                  000064f0    00000048     task_touch.obj (.text)
+                  00006538    00000042     main.obj (.text)
+                  0000657a    00000002     --HOLE-- [fill = 0]
+                  0000657c    00000034     relay.obj (.text)
+                  000065b0    00000024     rtsv7M4_T_le_v4SPD16_eabi.lib : memcmp.obj (.text)
+                  000065d4    00000018                                   : args_main.obj (.text)
+                  000065ec    00000014                                   : _lock.obj (.text)
+                  00006600    00000014                                   : strlen.obj (.text)
+                  00006614    0000000e                                   : copy_decompress_none.obj (.text:decompress:none)
+                  00006622    0000000c     config_tm4c.obj (.text)
+                  0000662e    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_zero_init.obj (.text:decompress:ZI)
+                  0000663a    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00006646    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.obj (.text)
+
+.const     0    0000664c    0000019b     
+                  0000664c    00000120     draw.obj (.const:.string)
+                  0000676c    0000005b     about.obj (.const:.string)
+                  000067c7    00000014     tasks.obj (.const:.string:ucExpectedStackBytes$1)
+                  000067db    0000000c     FT_800.obj (.const:.string:FT_DLCODE_BOOTUP)
+
+.cinit     0    000067e8    00000098     
+                  000067e8    00000072     (.cinit..data.load) [load image, compression = lzss]
+                  0000685a    00000002     --HOLE-- [fill = 0]
+                  0000685c    0000000c     (__TI_handler_table)
+                  00006868    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00006870    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.bss       0    20000000    0000295b     UNINITIALIZED
+                  20000000    00002710     heap_1.obj (.bss:ucHeap)
+                  20002710    00000140     tasks.obj (.bss:pxReadyTasksLists)
+                  20002850    00000050     (.common:xQueueRegistry)
+                  200028a0    00000018     view.obj (.bss)
+                  200028b8    00000014     tasks.obj (.bss:xDelayedTaskList1)
+                  200028cc    00000014     tasks.obj (.bss:xDelayedTaskList2)
+                  200028e0    00000014     tasks.obj (.bss:xPendingReadyList)
+                  200028f4    00000014     tasks.obj (.bss:xSuspendedTaskList)
+                  20002908    00000014     tasks.obj (.bss:xTasksWaitingTermination)
+                  2000291c    00000014     (.common:host)
+                  20002930    00000010     FT_800.obj (.bss)
+                  20002940    00000008     tasks.obj (.bss)
+                  20002948    00000008     (.common:xyTouch)
+                  20002950    00000004     (.common:Ft_CmdBuffer_Index)
+                  20002954    00000004     (.common:phost)
+                  20002958    00000001     button.obj (.bss)
+                  20002959    00000001     relay.obj (.bss)
+                  2000295a    00000001     touchscreen.obj (.bss)
+
+.stack     0    2000295c    00000200     UNINITIALIZED
+                  2000295c    00000200     --HOLE--
+
+.data      0    20002b5c    000000d0     UNINITIALIZED
+                  20002b5c    0000003c     draw.obj (.data)
+                  20002b98    00000030     tasks.obj (.data)
+                  20002bc8    0000001d     FT_800.obj (.data)
+                  20002be5    00000001     button.obj (.data)
+                  20002be6    00000001     calibrate.obj (.data)
+                  20002be7    00000001     touchscreen.obj (.data)
+                  20002be8    00000010     weight.obj (.data)
+                  20002bf8    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.obj (.data:$O1$$)
+                  20002c04    0000000c     about.obj (.data)
+                  20002c10    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.data:$O1$$)
+                  20002c18    00000008     heap_1.obj (.data)
+                  20002c20    00000004     osMutex_FT.obj (.data)
+                  20002c24    00000004     port.obj (.data)
+                  20002c28    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : stkdepth_vars.obj (.data)
+
+MODULE SUMMARY
+
+       Module                         code    ro data   rw data
+       ------                         ----    -------   -------
+    .\
+       FT_800.obj                     3756    12        81     
+       FT_CoPro_Cmds.obj              3464    0         0      
+       draw.obj                       2300    288       60     
+       FT_GPU_HAL.obj                 1964    0         0      
+       sw_utility.obj                 1666    0         0      
+       view.obj                       1204    0         24     
+       tm4c123gh6pm_startup_ccs.obj   12      620       0      
+       tm4c_port.obj                  464     0         0      
+       weight.obj                     420     0         16     
+       calibrate.obj                  360     0         1      
+       tm4c_spi2.obj                  344     0         0      
+       tm4c_eeprom.obj                244     0         0      
+       tm4c_adc1.obj                  216     0         0      
+       osMutex_FT.obj                 148     0         4      
+       button.obj                     132     0         2      
+       hx711.obj                      134     0         0      
+       touchscreen.obj                132     0         2      
+       about.obj                      0       91        12     
+       task_weight.obj                96      0         0      
+       task_pushbutton.obj            92      0         0      
+       FT_Platform.obj                88      0         0      
+       task_display.obj               80      0         0      
+       task_third.obj                 76      0         0      
+       task_touch.obj                 72      0         0      
+       main.obj                       66      0         0      
+       relay.obj                      52      0         1      
+       config_tm4c.obj                12      0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         17594   1011      203    
+                                                               
+    .\FreeRTOS\Source\
+       tasks.obj                      4036    20        476    
+       queue.obj                      2168    0         80     
+       list.obj                       298     0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         6502    20        556    
+                                                               
+    .\FreeRTOS\Source\portable\CCS\ARM_CM4F\
+       port.obj                       268     0         4      
+       portasm.obj                    166     0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         434     0         4      
+                                                               
+    .\FreeRTOS\Source\portable\MemMang\
+       heap_1.obj                     156     0         10008  
+    +--+------------------------------+-------+---------+---------+
+       Total:                         156     0         10008  
+                                                               
+    C:\ti\ccs740\ccsv7\tools\compiler\ti-cgt-arm_16.9.6.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       memcpy_t2.obj                  156     0         0      
+       memset_t2.obj                  122     0         0      
+       autoinit.obj                   112     0         0      
+       copy_decompress_lzss.obj       104     0         0      
+       exit.obj                       84      0         12     
+       boot.obj                       84      0         0      
+       cpy_tbl.obj                    76      0         0      
+       memcmp.obj                     36      0         0      
+       _lock.obj                      20      0         8      
+       args_main.obj                  24      0         0      
+       strlen.obj                     20      0         0      
+       copy_decompress_none.obj       14      0         0      
+       copy_zero_init.obj             12      0         0      
+       pre_init.obj                   4       0         0      
+       stkdepth_vars.obj              0       0         4      
+       mpu_init.obj                   2       0         0      
+       startup.obj                    2       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         872     0         24     
+                                                               
+       Stack:                         0       0         512    
+       Linker Generated:              0       150       0      
+    +--+------------------------------+-------+---------+---------+
+       Grand Total:                   25558   1181      11307  
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00006870 records: 2, size/record: 8, table size: 16
+	.data: load addr=000067e8, load size=00000072 bytes, run addr=20002b5c, run size=000000d0 bytes, compression=lzss
+	.bss: load addr=00006868, load size=00000008 bytes, run addr=20000000, run size=0000295b bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0000685c records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                               
+-------   ----                               
+00005c1d  ADC1_Init                          
+00005c85  ADC1_Run                           
+00004785  ASCII2Dec                          
+00004c2f  ArraysAreEqual                     
+0000605f  BUTTON_ClearState                  
+00005ff1  BUTTON_Init                        
+00006067  BUTTON_IsState                     
+00005ff9  BUTTON_Read                        
+0000600b  BUTTON_statemachine                
+000063b5  C$$EXIT                            
+00006623  CONFIG_Init                        
+00001551  Calibrate                          
+00005631  CalibrateDisplay                   
+00005703  CalibrateDisplayInfo               
+0000563d  CalibrateEEInfoDelete              
+00005687  CalibrateEEInfoSave                
+00001429  Clear_Touch_Tag_X_Y                
+00002087  ColorToRGB                         
+00004911  ConcatStr                          
+00004837  ConcatStr2Num                      
+00006409  DISPLAY_TaskInit                   
+00003415  DRAW_About                         
+000031fd  DRAW_CaliStart                     
+000032a1  DRAW_CaliWght                      
+000033b9  DRAW_Error                         
+00002e65  DRAW_Init                          
+00003141  DRAW_SetLimit                      
+00002e81  DRAW_Stg1Wght                      
+00002f47  DRAW_Stg2Wght                      
+00003351  DRAW_Success                       
+00003543  Draw_weightkeypad                  
+00005b29  EEPROM_Init                        
+00005bed  EEPROM_Read                        
+00005bcd  EEPROM_Write                       
+00006321  FT800_CS_CLEAR                     
+00006319  FT800_CS_SET                       
+00006331  FT800_PD_N_CLEAR                   
+00006329  FT800_PD_N_SET                     
+00001857  FT_CommandDLStart                  
+00001885  FT_CommandDisplay                  
+000067db  FT_DLCODE_BOOTUP                   
+00006349  FT_Delay                           
+20002bcc  FT_DispHCycle                      
+20002bce  FT_DispHOffset                     
+20002bd0  FT_DispHSync0                      
+20002bd2  FT_DispHSync1                      
+20002bca  FT_DispHeight                      
+20002bdc  FT_DispPCLK                        
+20002bde  FT_DispPCLKPol                     
+20002bdd  FT_DispSwizzle                     
+20002bd4  FT_DispVCycle                      
+20002bd6  FT_DispVOffset                     
+20002bd8  FT_DispVSync0                      
+20002bda  FT_DispVSync1                      
+20002bc8  FT_DispWidth                       
+00001989  FT_DrawButton                      
+00001ef5  FT_DrawConnect                     
+000018b5  FT_DrawKeyPad                      
+00001d49  FT_DrawLine                        
+00001cbd  FT_DrawNumber                      
+00001a9d  FT_DrawPoint                       
+00001b57  FT_DrawRectangle                   
+00002019  FT_DrawRectangleOutline            
+00001c2d  FT_DrawText                        
+00001e1d  FT_DrawThinLine                    
+00006309  FT_Init                            
+0000137b  FT_IsSound                         
+0000132b  FT_Play_Sound                      
+20002c20  FT_Semaphore                       
+0000135f  FT_StopSound                       
+00006339  FT_spiRdWt                         
+00004d83  FindSubstring                      
+0000499f  Float2ASCII                        
+000012d1  Ft_App_Flush_Co_Buffer             
+000012b9  Ft_App_WrCoCmd_Buffer              
+20002950  Ft_CmdBuffer_Index                 
+000043f5  Ft_Gpu_Cmdfifo_Freespace           
+00002a0f  Ft_Gpu_CoCmd_Append                
+0000246b  Ft_Gpu_CoCmd_BgColor               
+000028f9  Ft_Gpu_CoCmd_BitmapTransform       
+000026ad  Ft_Gpu_CoCmd_Button                
+0000298b  Ft_Gpu_CoCmd_Calibrate             
+00002aab  Ft_Gpu_CoCmd_Clock                 
+00002c8d  Ft_Gpu_CoCmd_ColdStart             
+00002d29  Ft_Gpu_CoCmd_Dial                  
+00002db7  Ft_Gpu_CoCmd_Dlstart               
+0000211d  Ft_Gpu_CoCmd_EndFunc               
+00002659  Ft_Gpu_CoCmd_FgColor               
+000022ef  Ft_Gpu_CoCmd_Gauge                 
+000027cd  Ft_Gpu_CoCmd_GetMatrix             
+00002391  Ft_Gpu_CoCmd_GetProps              
+00002bf9  Ft_Gpu_CoCmd_GetPtr                
+000028cf  Ft_Gpu_CoCmd_GradColor             
+00002b19  Ft_Gpu_CoCmd_Gradient              
+000024b5  Ft_Gpu_CoCmd_Inflate               
+0000262f  Ft_Gpu_CoCmd_Interrupt             
+00002cad  Ft_Gpu_CoCmd_Keys                  
+000021a1  Ft_Gpu_CoCmd_Letter                
+00002255  Ft_Gpu_CoCmd_LoadIdentity          
+00002d83  Ft_Gpu_CoCmd_LoadImage             
+000029ef  Ft_Gpu_CoCmd_Logo                  
+00002e21  Ft_Gpu_CoCmd_MemCrc                
+0000288b  Ft_Gpu_CoCmd_MemSet                
+00002729  Ft_Gpu_CoCmd_MemWrite              
+00002a43  Ft_Gpu_CoCmd_MemZero               
+000023d5  Ft_Gpu_CoCmd_Memcpy                
+000021fb  Ft_Gpu_CoCmd_Number                
+00002c23  Ft_Gpu_CoCmd_Progress              
+0000235d  Ft_Gpu_CoCmd_RegRead               
+00002683  Ft_Gpu_CoCmd_Rotate                
+00002a77  Ft_Gpu_CoCmd_Scale                 
+00002e01  Ft_Gpu_CoCmd_ScreenSaver           
+0000275d  Ft_Gpu_CoCmd_Scrollbar             
+000029bb  Ft_Gpu_CoCmd_SetFont               
+00002b7b  Ft_Gpu_CoCmd_SetMatrix             
+00002829  Ft_Gpu_CoCmd_Sketch                
+00002533  Ft_Gpu_CoCmd_Slider                
+00002dd7  Ft_Gpu_CoCmd_Snapshot              
+00002419  Ft_Gpu_CoCmd_Spinner               
+000020fd  Ft_Gpu_CoCmd_StartFunc             
+00002513  Ft_Gpu_CoCmd_Stop                  
+00002495  Ft_Gpu_CoCmd_Swap                  
+00002137  Ft_Gpu_CoCmd_Text                  
+00002275  Ft_Gpu_CoCmd_Toggle                
+0000259d  Ft_Gpu_CoCmd_TouchTransform        
+00002b9b  Ft_Gpu_CoCmd_Track                 
+000024df  Ft_Gpu_CoCmd_Translate             
+000020dd  Ft_Gpu_Copro_SendCmd               
+00004353  Ft_Gpu_Hal_CheckCmdBuffer          
+00004009  Ft_Gpu_Hal_Close                   
+00004019  Ft_Gpu_Hal_DeInit                  
+000045a9  Ft_Gpu_Hal_Dec2Ascii               
+000042c1  Ft_Gpu_Hal_EndTransfer             
+00003fd9  Ft_Gpu_Hal_Init                    
+00003fed  Ft_Gpu_Hal_Open                    
+000040f9  Ft_Gpu_Hal_Powercycle              
+00004133  Ft_Gpu_Hal_Rd16                    
+0000415b  Ft_Gpu_Hal_Rd32                    
+000041d5  Ft_Gpu_Hal_Rd8                     
+0000455d  Ft_Gpu_Hal_RdMem                   
+000041c5  Ft_Gpu_Hal_Sleep                   
+0000409d  Ft_Gpu_Hal_StartCmdTransfer        
+0000401b  Ft_Gpu_Hal_StartTransfer           
+000042d1  Ft_Gpu_Hal_Transfer16              
+000043ab  Ft_Gpu_Hal_Transfer32              
+000042af  Ft_Gpu_Hal_Transfer8               
+000040bd  Ft_Gpu_Hal_TransferString          
+00004373  Ft_Gpu_Hal_Updatecmdfifo           
+000044c7  Ft_Gpu_Hal_WaitCmdfifo_empty       
+000046a1  Ft_Gpu_Hal_WaitLogo_Finish         
+00004223  Ft_Gpu_Hal_Wr16                    
+00004249  Ft_Gpu_Hal_Wr32                    
+000041fd  Ft_Gpu_Hal_Wr8                     
+0000432b  Ft_Gpu_Hal_WrCmd32                 
+00004423  Ft_Gpu_Hal_WrCmdBuf                
+000046d9  Ft_Gpu_Hal_WrCmdBufFromFlash       
+0000426b  Ft_Gpu_Hal_WrMem                   
+00004519  Ft_Gpu_Hal_WrMemFromFlash          
+0000417f  Ft_Gpu_HostCommand                 
+00004689  Ft_Gpu_PowerModeSwitch             
+000012e1  Ft_Gpu_Rom_Font_WH                 
+00004c85  GetSubstring                       
+00005789  Get_CalibrationStatus              
+00005f69  HX711_Init                         
+00005f79  HX711_Run                          
+00001601  Initilize_Display                  
+000065a7  IsRelayActive                      
+20002c04  Legal1                             
+20002c08  Legal2                             
+000017a3  LoadCalibrationInfo                
+00004b69  MakeArray2Equal1                   
+00004bad  MakeString2Equal1                  
+20002b6c  MsgCalibrationL1                   
+20002b70  MsgCalibrationL2                   
+20002b74  MsgCalibrationL3                   
+20002b88  MsgLimitOff                        
+20002b84  MsgLimitOn                         
+20002b5c  MsgPushbBtnL1                      
+20002b60  MsgPushbBtnL2                      
+20002b68  MsgPushbBtnSave                    
+20002b64  MsgPushbBtnStp                     
+20002b80  MsgRelayOff                        
+20002b7c  MsgRelayOn                         
+20002b78  MsgSetLimit                        
+00005ed5  OSMutexFT_Init                     
+00005f21  OSMutexFT_u8use                    
+00005eeb  OSMutexFT_use                      
+000052f3  PORT_PA2out_Clear                  
+000052bd  PORT_PA2out_Init                   
+000052e7  PORT_PA2out_Set                    
+000052ff  PORT_PA2out_Toggle                 
+00005335  PORT_PA3                           
+0000530b  PORT_PA3in_Init                    
+00005371  PORT_PB2out_Clear                  
+00005345  PORT_PB2out_Init                   
+00005365  PORT_PB2out_Set                    
+000053a9  PORT_PB5out_Clear                  
+0000537d  PORT_PB5out_Init                   
+0000539d  PORT_PB5out_Set                    
+000053d5  PORT_PE0                           
+000053b5  PORT_PE0in_Init                    
+00005405  PORT_PE1                           
+000053e5  PORT_PE1in_Init                    
+00005447  PORT_PE3out_Clear                  
+00005415  PORT_PE3out_Init                   
+0000543b  PORT_PE3out_Set                    
+00005453  PORT_PE3out_Toggle                 
+000062f7  PUSHBUTTON_NotifyActive            
+000062ad  PUSHBUTTON_TaskInit                
+0000657d  RELAY_Init                         
+00006599  RELAY_Off                          
+0000658b  RELAY_On                           
+000017fd  ReadCalibrationInfo                
+00001459  ReadPushButton                     
+000013c3  Read_Tag                           
+000013d1  Read_TouchPresure                  
+000013e7  Read_TouchScreen                   
+000013fd  Read_Touch_Direct                  
+00001413  Read_Touch_Direct_Z1Z2             
+0000663b  ResetISR                           
+UNDEFED   SHT$$INIT_ARRAY$$Base              
+UNDEFED   SHT$$INIT_ARRAY$$Limit             
+00005799  SPI2_Init                          
+0000588f  SPI2_RdWt                          
+00004bf1  SetArray2Zero                      
+00004de3  StringLength                       
+000064a5  THIRD_TaskInit                     
+000060dd  TOUCHSCREEN_ClearState             
+000060e5  TOUCHSCREEN_IsState                
+00006075  TOUCHSCREEN_Read                   
+0000609b  TOUCHSCREEN_statemachine           
+000064f1  TOUCH_TaskInit                     
+00001399  Touch_Mode_Off                     
+00001389  Touch_Mode_On                      
+000013a9  TurnOnRotation                     
+0000526d  VIEW_ActiveString                  
+00004e09  VIEW_ImageState                    
+00005247  VIEW_SetImage                      
+0000528d  VIEW_WeightOz                      
+0000525b  VIEW_lbs                           
+00005261  VIEW_ounces                        
+20002c0c  Version                            
+000055f1  WEIGHT_GetLimit                    
+00005605  WEIGHT_GetLimitFromEEPROM          
+0000551d  WEIGHT_GetScaleMultiplierFromEEPROM
+000055b9  WEIGHT_GetScaleZeroFromEEPROM      
+000054a5  WEIGHT_GetValue                    
+0000548d  WEIGHT_Init                        
+00005499  WEIGHT_Measure                     
+000055f7  WEIGHT_SaveLimitToEEPROM           
+000054f7  WEIGHT_SaveScaleMultiplierToEEPROM 
+000055ab  WEIGHT_SaveScaleZeroToEEPROM       
+00005547  WEIGHT_ScaleMultiplier             
+000055cf  WEIGHT_SetLimit                    
+000055a1  WEIGHT_SetZer0                     
+0000626f  WEIGHT_TaskInit                    
+000050c9  WeightKeypad                       
+20002b5c  __STACK_END                        
+00000200  __STACK_SIZE                       
+20002b5c  __STACK_TOP                        
+00006870  __TI_CINIT_Base                    
+00006880  __TI_CINIT_Limit                   
+0000685c  __TI_Handler_Table_Base            
+00006868  __TI_Handler_Table_Limit           
+00006175  __TI_auto_init                     
+20002bf8  __TI_cleanup_ptr                   
+000061e5  __TI_decompress_lzss               
+00006615  __TI_decompress_none               
+20002bfc  __TI_dtors_ptr                     
+20002c00  __TI_enable_exit_profile_output    
+ffffffff  __TI_pprof_out_hndl                
+ffffffff  __TI_prof_data_size                
+ffffffff  __TI_prof_data_start               
+00000000  __TI_static_base__                 
+0000662f  __TI_zero_init                     
+000060f9  __aeabi_memclr                     
+000060f9  __aeabi_memclr4                    
+000060f9  __aeabi_memclr8                    
+00005e39  __aeabi_memcpy                     
+00005e39  __aeabi_memcpy4                    
+00005e39  __aeabi_memcpy8                    
+000060fb  __aeabi_memset                     
+000060fb  __aeabi_memset4                    
+000060fb  __aeabi_memset8                    
+ffffffff  __binit__                          
+ffffffff  __c_args__                         
+00004e07  __mpu_init                         
+2000295c  __stack                            
+000065d5  _args_main                         
+00006361  _c_int00                           
+20002c10  _lock                              
+000065fb  _nop                               
+000065f3  _register_lock                     
+000065ed  _register_unlock                   
+00005a1b  _system_post_cinit                 
+00006647  _system_pre_init                   
+20002c14  _unlock                            
+000063b9  abort                              
+ffffffff  binit                              
+00006459  copy_in                            
+000063c1  exit                               
+00000000  g_pfnVectors                       
+20002be0  gtouchState                        
+2000291c  host                               
+00001231  istouch                            
+00006543  main                               
+20002c28  main_func_sp                       
+000065b1  memcmp                             
+00005e39  memcpy                             
+00006101  memset                             
+20002954  phost                              
+00005d9d  pvPortMalloc                       
+20002b98  pxCurrentTCB                       
+00005a1d  pxPortInitialiseStack              
+20002b94  strPeriod                          
+20002b90  strUnitLbs                         
+20002b8c  strUnitOz                          
+00006601  strlen                             
+00003d2d  ucQueueGetQueueNumber              
+00003d55  ucQueueGetQueueType                
+000059d3  uxListRemove                       
+00003cc7  uxQueueMessagesWaiting             
+00003cfd  uxQueueMessagesWaitingFromISR      
+00003cdd  uxQueueSpacesAvailable             
+000008f5  uxTaskGetNumberOfTasks             
+000010ad  uxTaskGetStackHighWaterMark        
+00000901  uxTaskGetSystemState               
+00000d53  uxTaskGetTaskNumber                
+0000049b  uxTaskPriorityGet                  
+00006539  vApplicationStackOverflowHook      
+000058f1  vListInitialise                    
+00005921  vListInitialiseItem                
+0000596d  vListInsert                        
+00005931  vListInsertEnd                     
+00005d51  vPortClearInterruptMask            
+00005d89  vPortEnableVFP                     
+00005aa9  vPortEndScheduler                  
+00005abf  vPortEnterCritical                 
+00005acf  vPortExitCritical                  
+00005e0d  vPortFree                          
+00005e17  vPortInitialiseBlocks              
+00005d5b  vPortSVCHandler                    
+00005d47  vPortSetInterruptMask              
+00005d75  vPortStartFirstTask                
+00005ab5  vPortYield                         
+00005aab  vPortYieldFromISR                  
+00003f53  vQueueAddToRegistry                
+00003d0f  vQueueDelete                       
+00003d3d  vQueueSetQueueNumber               
+00003f95  vQueueUnregisterQueue              
+00000461  vTaskDelay                         
+000003db  vTaskDelayUntil                    
+0000037b  vTaskDelete                        
+000007c9  vTaskEndScheduler                  
+00000d4b  vTaskMissedYield                   
+00000be1  vTaskPlaceOnEventList              
+000011c5  vTaskPriorityDisinherit            
+00001129  vTaskPriorityInherit               
+000004cd  vTaskPrioritySet                   
+00000691  vTaskResume                        
+00000d7d  vTaskSetTaskNumber                 
+00000cb1  vTaskSetTimeOutState               
+00000783  vTaskStartScheduler                
+000005dd  vTaskSuspend                       
+000007db  vTaskSuspendAll                    
+00000b29  vTaskSwitchContext                 
+20002bf0  weight_base                        
+20002be8  weight_limit                       
+20002bf4  weight_scalemultipler              
+20002bec  weight_value                       
+00005e1f  xPortGetFreeHeapSize               
+00005cf9  xPortPendSVHandler                 
+00005a73  xPortStartScheduler                
+00005ae5  xPortSysTickHandler                
+0000385f  xQueueCreateMutex                  
+000037f1  xQueueGenericCreate                
+00003acb  xQueueGenericReceive               
+00003761  xQueueGenericReset                 
+0000395b  xQueueGenericSend                  
+00003a4d  xQueueGenericSendFromISR           
+000038d5  xQueueGiveMutexRecursive           
+00003eef  xQueueIsQueueEmptyFromISR          
+00003f31  xQueueIsQueueFullFromISR           
+00003c83  xQueuePeekFromISR                  
+00003c0b  xQueueReceiveFromISR               
+20002850  xQueueRegistry                     
+00003911  xQueueTakeMutexRecursive           
+00000cd1  xTaskCheckForTimeOut               
+0000026d  xTaskGenericCreate                 
+000010f1  xTaskGetCurrentTaskHandle          
+000008c9  xTaskGetTickCount                  
+000008dd  xTaskGetTickCountFromISR           
+000009dd  xTaskIncrementTick                 
+0000064d  xTaskIsTaskSuspended               
+00000c2d  xTaskRemoveFromEventList           
+000007ed  xTaskResumeAll                     
+00000701  xTaskResumeFromISR                 
+20002948  xyTouch                            
+00001263  xyTouch2Loop                       
+0000129b  xyTouch2Pix                        
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                               
+-------   ----                               
+00000000  __TI_static_base__                 
+00000000  g_pfnVectors                       
+00000200  __STACK_SIZE                       
+0000026d  xTaskGenericCreate                 
+0000037b  vTaskDelete                        
+000003db  vTaskDelayUntil                    
+00000461  vTaskDelay                         
+0000049b  uxTaskPriorityGet                  
+000004cd  vTaskPrioritySet                   
+000005dd  vTaskSuspend                       
+0000064d  xTaskIsTaskSuspended               
+00000691  vTaskResume                        
+00000701  xTaskResumeFromISR                 
+00000783  vTaskStartScheduler                
+000007c9  vTaskEndScheduler                  
+000007db  vTaskSuspendAll                    
+000007ed  xTaskResumeAll                     
+000008c9  xTaskGetTickCount                  
+000008dd  xTaskGetTickCountFromISR           
+000008f5  uxTaskGetNumberOfTasks             
+00000901  uxTaskGetSystemState               
+000009dd  xTaskIncrementTick                 
+00000b29  vTaskSwitchContext                 
+00000be1  vTaskPlaceOnEventList              
+00000c2d  xTaskRemoveFromEventList           
+00000cb1  vTaskSetTimeOutState               
+00000cd1  xTaskCheckForTimeOut               
+00000d4b  vTaskMissedYield                   
+00000d53  uxTaskGetTaskNumber                
+00000d7d  vTaskSetTaskNumber                 
+000010ad  uxTaskGetStackHighWaterMark        
+000010f1  xTaskGetCurrentTaskHandle          
+00001129  vTaskPriorityInherit               
+000011c5  vTaskPriorityDisinherit            
+00001231  istouch                            
+00001263  xyTouch2Loop                       
+0000129b  xyTouch2Pix                        
+000012b9  Ft_App_WrCoCmd_Buffer              
+000012d1  Ft_App_Flush_Co_Buffer             
+000012e1  Ft_Gpu_Rom_Font_WH                 
+0000132b  FT_Play_Sound                      
+0000135f  FT_StopSound                       
+0000137b  FT_IsSound                         
+00001389  Touch_Mode_On                      
+00001399  Touch_Mode_Off                     
+000013a9  TurnOnRotation                     
+000013c3  Read_Tag                           
+000013d1  Read_TouchPresure                  
+000013e7  Read_TouchScreen                   
+000013fd  Read_Touch_Direct                  
+00001413  Read_Touch_Direct_Z1Z2             
+00001429  Clear_Touch_Tag_X_Y                
+00001459  ReadPushButton                     
+00001551  Calibrate                          
+00001601  Initilize_Display                  
+000017a3  LoadCalibrationInfo                
+000017fd  ReadCalibrationInfo                
+00001857  FT_CommandDLStart                  
+00001885  FT_CommandDisplay                  
+000018b5  FT_DrawKeyPad                      
+00001989  FT_DrawButton                      
+00001a9d  FT_DrawPoint                       
+00001b57  FT_DrawRectangle                   
+00001c2d  FT_DrawText                        
+00001cbd  FT_DrawNumber                      
+00001d49  FT_DrawLine                        
+00001e1d  FT_DrawThinLine                    
+00001ef5  FT_DrawConnect                     
+00002019  FT_DrawRectangleOutline            
+00002087  ColorToRGB                         
+000020dd  Ft_Gpu_Copro_SendCmd               
+000020fd  Ft_Gpu_CoCmd_StartFunc             
+0000211d  Ft_Gpu_CoCmd_EndFunc               
+00002137  Ft_Gpu_CoCmd_Text                  
+000021a1  Ft_Gpu_CoCmd_Letter                
+000021fb  Ft_Gpu_CoCmd_Number                
+00002255  Ft_Gpu_CoCmd_LoadIdentity          
+00002275  Ft_Gpu_CoCmd_Toggle                
+000022ef  Ft_Gpu_CoCmd_Gauge                 
+0000235d  Ft_Gpu_CoCmd_RegRead               
+00002391  Ft_Gpu_CoCmd_GetProps              
+000023d5  Ft_Gpu_CoCmd_Memcpy                
+00002419  Ft_Gpu_CoCmd_Spinner               
+0000246b  Ft_Gpu_CoCmd_BgColor               
+00002495  Ft_Gpu_CoCmd_Swap                  
+000024b5  Ft_Gpu_CoCmd_Inflate               
+000024df  Ft_Gpu_CoCmd_Translate             
+00002513  Ft_Gpu_CoCmd_Stop                  
+00002533  Ft_Gpu_CoCmd_Slider                
+0000259d  Ft_Gpu_CoCmd_TouchTransform        
+0000262f  Ft_Gpu_CoCmd_Interrupt             
+00002659  Ft_Gpu_CoCmd_FgColor               
+00002683  Ft_Gpu_CoCmd_Rotate                
+000026ad  Ft_Gpu_CoCmd_Button                
+00002729  Ft_Gpu_CoCmd_MemWrite              
+0000275d  Ft_Gpu_CoCmd_Scrollbar             
+000027cd  Ft_Gpu_CoCmd_GetMatrix             
+00002829  Ft_Gpu_CoCmd_Sketch                
+0000288b  Ft_Gpu_CoCmd_MemSet                
+000028cf  Ft_Gpu_CoCmd_GradColor             
+000028f9  Ft_Gpu_CoCmd_BitmapTransform       
+0000298b  Ft_Gpu_CoCmd_Calibrate             
+000029bb  Ft_Gpu_CoCmd_SetFont               
+000029ef  Ft_Gpu_CoCmd_Logo                  
+00002a0f  Ft_Gpu_CoCmd_Append                
+00002a43  Ft_Gpu_CoCmd_MemZero               
+00002a77  Ft_Gpu_CoCmd_Scale                 
+00002aab  Ft_Gpu_CoCmd_Clock                 
+00002b19  Ft_Gpu_CoCmd_Gradient              
+00002b7b  Ft_Gpu_CoCmd_SetMatrix             
+00002b9b  Ft_Gpu_CoCmd_Track                 
+00002bf9  Ft_Gpu_CoCmd_GetPtr                
+00002c23  Ft_Gpu_CoCmd_Progress              
+00002c8d  Ft_Gpu_CoCmd_ColdStart             
+00002cad  Ft_Gpu_CoCmd_Keys                  
+00002d29  Ft_Gpu_CoCmd_Dial                  
+00002d83  Ft_Gpu_CoCmd_LoadImage             
+00002db7  Ft_Gpu_CoCmd_Dlstart               
+00002dd7  Ft_Gpu_CoCmd_Snapshot              
+00002e01  Ft_Gpu_CoCmd_ScreenSaver           
+00002e21  Ft_Gpu_CoCmd_MemCrc                
+00002e65  DRAW_Init                          
+00002e81  DRAW_Stg1Wght                      
+00002f47  DRAW_Stg2Wght                      
+00003141  DRAW_SetLimit                      
+000031fd  DRAW_CaliStart                     
+000032a1  DRAW_CaliWght                      
+00003351  DRAW_Success                       
+000033b9  DRAW_Error                         
+00003415  DRAW_About                         
+00003543  Draw_weightkeypad                  
+00003761  xQueueGenericReset                 
+000037f1  xQueueGenericCreate                
+0000385f  xQueueCreateMutex                  
+000038d5  xQueueGiveMutexRecursive           
+00003911  xQueueTakeMutexRecursive           
+0000395b  xQueueGenericSend                  
+00003a4d  xQueueGenericSendFromISR           
+00003acb  xQueueGenericReceive               
+00003c0b  xQueueReceiveFromISR               
+00003c83  xQueuePeekFromISR                  
+00003cc7  uxQueueMessagesWaiting             
+00003cdd  uxQueueSpacesAvailable             
+00003cfd  uxQueueMessagesWaitingFromISR      
+00003d0f  vQueueDelete                       
+00003d2d  ucQueueGetQueueNumber              
+00003d3d  vQueueSetQueueNumber               
+00003d55  ucQueueGetQueueType                
+00003eef  xQueueIsQueueEmptyFromISR          
+00003f31  xQueueIsQueueFullFromISR           
+00003f53  vQueueAddToRegistry                
+00003f95  vQueueUnregisterQueue              
+00003fd9  Ft_Gpu_Hal_Init                    
+00003fed  Ft_Gpu_Hal_Open                    
+00004009  Ft_Gpu_Hal_Close                   
+00004019  Ft_Gpu_Hal_DeInit                  
+0000401b  Ft_Gpu_Hal_StartTransfer           
+0000409d  Ft_Gpu_Hal_StartCmdTransfer        
+000040bd  Ft_Gpu_Hal_TransferString          
+000040f9  Ft_Gpu_Hal_Powercycle              
+00004133  Ft_Gpu_Hal_Rd16                    
+0000415b  Ft_Gpu_Hal_Rd32                    
+0000417f  Ft_Gpu_HostCommand                 
+000041c5  Ft_Gpu_Hal_Sleep                   
+000041d5  Ft_Gpu_Hal_Rd8                     
+000041fd  Ft_Gpu_Hal_Wr8                     
+00004223  Ft_Gpu_Hal_Wr16                    
+00004249  Ft_Gpu_Hal_Wr32                    
+0000426b  Ft_Gpu_Hal_WrMem                   
+000042af  Ft_Gpu_Hal_Transfer8               
+000042c1  Ft_Gpu_Hal_EndTransfer             
+000042d1  Ft_Gpu_Hal_Transfer16              
+0000432b  Ft_Gpu_Hal_WrCmd32                 
+00004353  Ft_Gpu_Hal_CheckCmdBuffer          
+00004373  Ft_Gpu_Hal_Updatecmdfifo           
+000043ab  Ft_Gpu_Hal_Transfer32              
+000043f5  Ft_Gpu_Cmdfifo_Freespace           
+00004423  Ft_Gpu_Hal_WrCmdBuf                
+000044c7  Ft_Gpu_Hal_WaitCmdfifo_empty       
+00004519  Ft_Gpu_Hal_WrMemFromFlash          
+0000455d  Ft_Gpu_Hal_RdMem                   
+000045a9  Ft_Gpu_Hal_Dec2Ascii               
+00004689  Ft_Gpu_PowerModeSwitch             
+000046a1  Ft_Gpu_Hal_WaitLogo_Finish         
+000046d9  Ft_Gpu_Hal_WrCmdBufFromFlash       
+00004785  ASCII2Dec                          
+00004837  ConcatStr2Num                      
+00004911  ConcatStr                          
+0000499f  Float2ASCII                        
+00004b69  MakeArray2Equal1                   
+00004bad  MakeString2Equal1                  
+00004bf1  SetArray2Zero                      
+00004c2f  ArraysAreEqual                     
+00004c85  GetSubstring                       
+00004d83  FindSubstring                      
+00004de3  StringLength                       
+00004e07  __mpu_init                         
+00004e09  VIEW_ImageState                    
+000050c9  WeightKeypad                       
+00005247  VIEW_SetImage                      
+0000525b  VIEW_lbs                           
+00005261  VIEW_ounces                        
+0000526d  VIEW_ActiveString                  
+0000528d  VIEW_WeightOz                      
+000052bd  PORT_PA2out_Init                   
+000052e7  PORT_PA2out_Set                    
+000052f3  PORT_PA2out_Clear                  
+000052ff  PORT_PA2out_Toggle                 
+0000530b  PORT_PA3in_Init                    
+00005335  PORT_PA3                           
+00005345  PORT_PB2out_Init                   
+00005365  PORT_PB2out_Set                    
+00005371  PORT_PB2out_Clear                  
+0000537d  PORT_PB5out_Init                   
+0000539d  PORT_PB5out_Set                    
+000053a9  PORT_PB5out_Clear                  
+000053b5  PORT_PE0in_Init                    
+000053d5  PORT_PE0                           
+000053e5  PORT_PE1in_Init                    
+00005405  PORT_PE1                           
+00005415  PORT_PE3out_Init                   
+0000543b  PORT_PE3out_Set                    
+00005447  PORT_PE3out_Clear                  
+00005453  PORT_PE3out_Toggle                 
+0000548d  WEIGHT_Init                        
+00005499  WEIGHT_Measure                     
+000054a5  WEIGHT_GetValue                    
+000054f7  WEIGHT_SaveScaleMultiplierToEEPROM 
+0000551d  WEIGHT_GetScaleMultiplierFromEEPROM
+00005547  WEIGHT_ScaleMultiplier             
+000055a1  WEIGHT_SetZer0                     
+000055ab  WEIGHT_SaveScaleZeroToEEPROM       
+000055b9  WEIGHT_GetScaleZeroFromEEPROM      
+000055cf  WEIGHT_SetLimit                    
+000055f1  WEIGHT_GetLimit                    
+000055f7  WEIGHT_SaveLimitToEEPROM           
+00005605  WEIGHT_GetLimitFromEEPROM          
+00005631  CalibrateDisplay                   
+0000563d  CalibrateEEInfoDelete              
+00005687  CalibrateEEInfoSave                
+00005703  CalibrateDisplayInfo               
+00005789  Get_CalibrationStatus              
+00005799  SPI2_Init                          
+0000588f  SPI2_RdWt                          
+000058f1  vListInitialise                    
+00005921  vListInitialiseItem                
+00005931  vListInsertEnd                     
+0000596d  vListInsert                        
+000059d3  uxListRemove                       
+00005a1b  _system_post_cinit                 
+00005a1d  pxPortInitialiseStack              
+00005a73  xPortStartScheduler                
+00005aa9  vPortEndScheduler                  
+00005aab  vPortYieldFromISR                  
+00005ab5  vPortYield                         
+00005abf  vPortEnterCritical                 
+00005acf  vPortExitCritical                  
+00005ae5  xPortSysTickHandler                
+00005b29  EEPROM_Init                        
+00005bcd  EEPROM_Write                       
+00005bed  EEPROM_Read                        
+00005c1d  ADC1_Init                          
+00005c85  ADC1_Run                           
+00005cf9  xPortPendSVHandler                 
+00005d47  vPortSetInterruptMask              
+00005d51  vPortClearInterruptMask            
+00005d5b  vPortSVCHandler                    
+00005d75  vPortStartFirstTask                
+00005d89  vPortEnableVFP                     
+00005d9d  pvPortMalloc                       
+00005e0d  vPortFree                          
+00005e17  vPortInitialiseBlocks              
+00005e1f  xPortGetFreeHeapSize               
+00005e39  __aeabi_memcpy                     
+00005e39  __aeabi_memcpy4                    
+00005e39  __aeabi_memcpy8                    
+00005e39  memcpy                             
+00005ed5  OSMutexFT_Init                     
+00005eeb  OSMutexFT_use                      
+00005f21  OSMutexFT_u8use                    
+00005f69  HX711_Init                         
+00005f79  HX711_Run                          
+00005ff1  BUTTON_Init                        
+00005ff9  BUTTON_Read                        
+0000600b  BUTTON_statemachine                
+0000605f  BUTTON_ClearState                  
+00006067  BUTTON_IsState                     
+00006075  TOUCHSCREEN_Read                   
+0000609b  TOUCHSCREEN_statemachine           
+000060dd  TOUCHSCREEN_ClearState             
+000060e5  TOUCHSCREEN_IsState                
+000060f9  __aeabi_memclr                     
+000060f9  __aeabi_memclr4                    
+000060f9  __aeabi_memclr8                    
+000060fb  __aeabi_memset                     
+000060fb  __aeabi_memset4                    
+000060fb  __aeabi_memset8                    
+00006101  memset                             
+00006175  __TI_auto_init                     
+000061e5  __TI_decompress_lzss               
+0000626f  WEIGHT_TaskInit                    
+000062ad  PUSHBUTTON_TaskInit                
+000062f7  PUSHBUTTON_NotifyActive            
+00006309  FT_Init                            
+00006319  FT800_CS_SET                       
+00006321  FT800_CS_CLEAR                     
+00006329  FT800_PD_N_SET                     
+00006331  FT800_PD_N_CLEAR                   
+00006339  FT_spiRdWt                         
+00006349  FT_Delay                           
+00006361  _c_int00                           
+000063b5  C$$EXIT                            
+000063b9  abort                              
+000063c1  exit                               
+00006409  DISPLAY_TaskInit                   
+00006459  copy_in                            
+000064a5  THIRD_TaskInit                     
+000064f1  TOUCH_TaskInit                     
+00006539  vApplicationStackOverflowHook      
+00006543  main                               
+0000657d  RELAY_Init                         
+0000658b  RELAY_On                           
+00006599  RELAY_Off                          
+000065a7  IsRelayActive                      
+000065b1  memcmp                             
+000065d5  _args_main                         
+000065ed  _register_unlock                   
+000065f3  _register_lock                     
+000065fb  _nop                               
+00006601  strlen                             
+00006615  __TI_decompress_none               
+00006623  CONFIG_Init                        
+0000662f  __TI_zero_init                     
+0000663b  ResetISR                           
+00006647  _system_pre_init                   
+000067db  FT_DLCODE_BOOTUP                   
+0000685c  __TI_Handler_Table_Base            
+00006868  __TI_Handler_Table_Limit           
+00006870  __TI_CINIT_Base                    
+00006880  __TI_CINIT_Limit                   
+20002850  xQueueRegistry                     
+2000291c  host                               
+20002948  xyTouch                            
+20002950  Ft_CmdBuffer_Index                 
+20002954  phost                              
+2000295c  __stack                            
+20002b5c  MsgPushbBtnL1                      
+20002b5c  __STACK_END                        
+20002b5c  __STACK_TOP                        
+20002b60  MsgPushbBtnL2                      
+20002b64  MsgPushbBtnStp                     
+20002b68  MsgPushbBtnSave                    
+20002b6c  MsgCalibrationL1                   
+20002b70  MsgCalibrationL2                   
+20002b74  MsgCalibrationL3                   
+20002b78  MsgSetLimit                        
+20002b7c  MsgRelayOn                         
+20002b80  MsgRelayOff                        
+20002b84  MsgLimitOn                         
+20002b88  MsgLimitOff                        
+20002b8c  strUnitOz                          
+20002b90  strUnitLbs                         
+20002b94  strPeriod                          
+20002b98  pxCurrentTCB                       
+20002bc8  FT_DispWidth                       
+20002bca  FT_DispHeight                      
+20002bcc  FT_DispHCycle                      
+20002bce  FT_DispHOffset                     
+20002bd0  FT_DispHSync0                      
+20002bd2  FT_DispHSync1                      
+20002bd4  FT_DispVCycle                      
+20002bd6  FT_DispVOffset                     
+20002bd8  FT_DispVSync0                      
+20002bda  FT_DispVSync1                      
+20002bdc  FT_DispPCLK                        
+20002bdd  FT_DispSwizzle                     
+20002bde  FT_DispPCLKPol                     
+20002be0  gtouchState                        
+20002be8  weight_limit                       
+20002bec  weight_value                       
+20002bf0  weight_base                        
+20002bf4  weight_scalemultipler              
+20002bf8  __TI_cleanup_ptr                   
+20002bfc  __TI_dtors_ptr                     
+20002c00  __TI_enable_exit_profile_output    
+20002c04  Legal1                             
+20002c08  Legal2                             
+20002c0c  Version                            
+20002c10  _lock                              
+20002c14  _unlock                            
+20002c20  FT_Semaphore                       
+20002c28  main_func_sp                       
+ffffffff  __TI_pprof_out_hndl                
+ffffffff  __TI_prof_data_size                
+ffffffff  __TI_prof_data_start               
+ffffffff  __binit__                          
+ffffffff  __c_args__                         
+ffffffff  binit                              
+UNDEFED   SHT$$INIT_ARRAY$$Base              
+UNDEFED   SHT$$INIT_ARRAY$$Limit             
+
+[400 symbols]
